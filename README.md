@@ -1,38 +1,68 @@
 🌾 KrishiMitra AI
-Multilingual Agricultural Decision Support Agent
-📌 Overview
+Multilingual Agricultural Decision-Support Agent
+📖 Table of Contents
 
-KrishiMitra AI is a goal-driven agricultural decision-support agent that helps farmers make structured, data-informed crop selling decisions.
+Overview
 
-The system dynamically detects crop intent, selectively invokes relevant tools (weather, market price, schemes), and generates actionable recommendations with reasoning and confidence levels — in the same language as the user.
+Problem Statement
 
-🚩 Problem
+Solution
 
-Farmers often rely on fragmented information sources:
+Core Features
+
+System Architecture
+
+Tech Stack
+
+Installation & Setup
+
+Usage
+
+Example Queries
+
+Project Structure
+
+Future Improvements
+
+License
+
+🔎 Overview
+
+KrishiMitra AI is a goal-driven agricultural decision-support agent designed to help farmers make structured and data-informed crop-selling decisions.
+
+The system dynamically detects crop intent from user queries, selectively invokes relevant tools (weather, market price, and government schemes), and generates actionable recommendations with reasoning and confidence levels — in the same language as the user.
+
+🚩 Problem Statement
+
+Small and marginal farmers often rely on fragmented and unstructured information sources:
 
 Weather forecasts
 
-Mandi/market prices
+Market (mandi) prices
 
 Government schemes
 
-This lack of unified intelligence makes timely and optimal crop-selling decisions difficult.
+The lack of unified, structured intelligence makes timely and optimal crop-selling decisions difficult, increasing financial risk and uncertainty.
 
 💡 Solution
 
-KrishiMitra AI integrates structured data and LLM-based reasoning into a modular decision engine that:
+KrishiMitra AI integrates structured data tools with large language model reasoning to produce clear, explainable recommendations.
 
-Detects crop from user query
+The system:
 
-Dynamically routes relevant tools
+Detects crop and intent from the user query
 
-Generates structured decision outputs
+Dynamically selects relevant tools
 
-Automatically adapts to user language
+Injects structured data into the reasoning engine
+
+Generates a structured recommendation
 
 Stores interaction history in MongoDB
 
-🧠 Features
+This transforms fragmented data into actionable agricultural intelligence.
+
+🧠 Core Features
 
 🔍 Crop Detection from Query
 
@@ -40,7 +70,7 @@ Stores interaction history in MongoDB
 
 🌍 Multilingual Response Generation
 
-📊 Structured Recommendation Format
+📊 Structured Decision Output
 
 🗄 MongoDB-Based Memory Persistence
 
@@ -71,19 +101,37 @@ PyMongo
 
 python-dotenv
 
-🚀 Installation
-1️⃣ Clone Repository
+⚙ Installation & Setup
+1️⃣ Clone the Repository
 git clone https://github.com/yourusername/KrishiMitra.git
 cd KrishiMitra
 2️⃣ Install Dependencies
 pip install -r requirements.txt
-3️⃣ Configure Environment
+3️⃣ Configure Environment Variables
 
-Create a .env file:
+Create a .env file in the root directory:
 
 GEMINI_API_KEY=your_api_key_here
-4️⃣ Run Application
+
+Make sure MongoDB is running locally:
+
+mongod
+4️⃣ Run the Application
 python main.py
+▶ Usage
+
+The agent accepts natural language agricultural queries via terminal input.
+
+It generates structured responses including:
+
+Recommendation
+
+Reasoning
+
+Confidence Level
+
+All responses are automatically generated in the same language as the user’s query.
+
 🧪 Example Queries
 
 Should I sell wheat this week?
@@ -94,18 +142,24 @@ What is the current rice price?
 
 મારે આ અઠવાડિયે ઘઉં વેચવું જોઈએ?
 
-📈 Future Scope
+📂 Project Structure
+KrishiMitra/
+│
+├── main.py          # Core agent logic
+├── tools.py         # Tool definitions (weather, price, schemes)
+├── memory.py        # MongoDB persistence layer
+├── requirements.txt
+├── README.md
+└── .gitignore
 
-Real-time agricultural APIs
+🚀 Future Improvements
 
-Region-specific analytics
-
-Trend forecasting
-
-Mobile/web deployment
-
-Reinforcement learning optimization
+Real-time agricultural API integration
+Regional customization
+Historical trend modeling
+Web or mobile deployment
+Advanced decision scoring models
 
 📄 License
 
-This project was developed for hackathon demonstration purposes.
+Developed for hackathon demonstration purposes.
